@@ -161,53 +161,40 @@ struct ContentView: View {
     {
         setValues()
         
-        // MARK: - MVP
-        
-       
-        
-        
+        for i in self.values{
+            output.append(i)
+            output.append(" ")
+        }
     }
-    
     func stretch1ButtonPressed() {
         
         setValues()
         
-        // MARK: - Stretch #1
-        
-     
-        
-        
+        for i in values{
+            if i != values[0]{
+                output.append(",")
+            }
+            output.append(i)
+        }
     }
     
     func stretch2ButtonPressed() {
-        
         setValues()
         var maximum = Int(values[0])
-        
-        // MARK: - Stretch #2
-        
-        
-        
-        
-        
-        
-        
+        for i in values{
+            if maximum ?? 0 < Int(i) ?? 0{
+                maximum = Int(i)
+            }
+        }
         output = "After searching the array, \(maximum!) is the largest"
     }
     
     func stretch3ButtonPressed() {
-        
         setValues()
         var sum = 0
-        
-        // MARK: - Stretch #3
-        
-       
-        
-        
-        
-        
-        
+        for i in values{
+            sum += Int(i) ?? 0
+        }
         output = "The total of the array is \(sum)"
     }
     
@@ -217,21 +204,24 @@ struct ContentView: View {
         var minimum = Int(values[0])
         var index = 0
         
-        // MARK: - Stretch #4
-        
-       
-        
-        
-        
-        
+        for (p,i) in values.enumerated(){
+            if minimum ?? 0 > Int(i) ?? 0{
+                minimum = Int(i)
+                index = Int(p) + 1
+            }
+        }
         output = "After searching the array, we have found the minimum is \(minimum!) and is in index # \(index)"
     }
     
     func stretch5ButtonPressed() {
         
         setValues()
-        
-        // MARK: - Stretch #5
+        for (i,v) in namesAndScores{
+            output.append(i)
+            output.append(":")
+            output.append(String(v))
+            output.append("\n")
+        }
         
        
         
