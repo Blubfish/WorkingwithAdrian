@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct ContentView: View {
+struct LoopsChallengeContentView: View {
     
     @State var number1 = ""
     @State var number2 = ""
