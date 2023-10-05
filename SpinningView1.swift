@@ -6,18 +6,15 @@ struct SpinningView1: View {
     
     var body: some View {
         Button("Spins") {
-            //MARK: MVP - Part I
-            
-            
-            
-            
+            self.currentDegree += 10
             
         }
         .frame(width: 100, height: 50)
         .background(.blue)
         .foregroundColor(.white)
         .clipShape(RoundedRectangle(cornerRadius: 10.0))
-        //MARK: MVP - Part II
+        .rotationEffect(.degrees(self.currentDegree))
+        
         
         
         

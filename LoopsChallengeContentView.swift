@@ -108,7 +108,7 @@ struct LoopsChallengeContentView: View {
             }
             Spacer()
             Group {
-                Text("Enter three names into the textfields with the corresponding high scores. When you are done entering the names ands scores, press the Stretch #5 button.")
+                Text(".")
                 HStack{
                     Text("#1:")
                     TextField("Enter Name Here", text: $name1)
@@ -160,7 +160,6 @@ struct LoopsChallengeContentView: View {
     func mvpButtonPressed()
     {
         setValues()
-        
         for i in self.values{
             output.append(i)
             output.append(" ")
@@ -169,7 +168,6 @@ struct LoopsChallengeContentView: View {
     func stretch1ButtonPressed() {
         
         setValues()
-        
         for i in values{
             if i != values[0]{
                 output.append(",")
@@ -210,7 +208,7 @@ struct LoopsChallengeContentView: View {
                 index = Int(p) + 1
             }
         }
-        output = "After searching the array, we have found the minimum is \(minimum!) and is in index # \(index)"
+        output = " minimum is \(minimum!) index # \(index)"
     }
     
     func stretch5ButtonPressed() {
@@ -231,3 +229,4 @@ struct LoopsChallengeContentView: View {
         
     }
 }
+

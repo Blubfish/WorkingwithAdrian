@@ -13,7 +13,11 @@ struct MovingView: View {
                 .foregroundColor(.white)
                 .clipShape(RoundedRectangle(cornerRadius: 10.0))
                 .offset(x: xPosition, y: yPosition)
-            //MARK: Stretch #2 
+            Button(action: {
+                
+            }, label: {
+                
+            })
             
             
             

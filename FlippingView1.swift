@@ -6,13 +6,15 @@ struct FlippingView1: View {
     
     var body: some View {
         Button("Flips") {
-            currentRotation += 360
+            currentRotation += 180
+            
         }
+        
         .frame(width: 100, height: 50)
         .background(.blue)
         .foregroundColor(.white)
         .clipShape(RoundedRectangle(cornerRadius: 10.0))
-        //MARK: Stretch #1 - Part I
+        .rotation3DEffect(.degrees(self.currentRotation), axis: (x: 1.0, y: 0.0, z: 0.0))
         
         
         
